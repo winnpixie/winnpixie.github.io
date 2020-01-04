@@ -1,0 +1,38 @@
+:root {
+    --x-color: #fafafa;
+    --x-text-color: #ff9900;
+    --x-back-color: #222233;
+    --x-fore-color: #afafaf;
+}
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--x-back-color);
+    color: var(--x-color);
+    margin: 0px auto;
+}
+body {
+    width: 60%;
+}
+@media (max-width: 1080px) {
+    body {
+        width: 90%;
+    }
+}
+h1, h2, h3, h4, h5, h6, a, a:visited {
+    font-weight: lighter;
+    font-style: italic;
+    color: var(--x-text-color);
+}
+header {
+    padding: 10px;
+    border-bottom: 2px solid var(--x-fore-color);
+}
+main {
+    padding: 10px;
+}
+footer {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border-top: 2px solid var(--x-fore-color);
+}
