@@ -7,7 +7,7 @@
             let reposList = document.getElementById('repos');
             for (let repo of repos) {
                 let repoItem = document.createElement('li');
-                repoItem.innerHTML = `<a href="${repo.html_url}">${repo.name}</a> - ${repo.description}`;
+                repoItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}`;
                 reposList.appendChild(repoItem);
             }
         }));
