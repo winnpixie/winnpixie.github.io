@@ -4,9 +4,7 @@
     window.initialize = () => {
         // Automagically grab my repositories and populate #repos with them.
         let repoList = document.getElementById('repos');
-        window.fetch('https://api.github.com/users/alerithe/repos', {
-            cache: 'no-cache'
-        }).then(response => {
+        window.fetch('https://api.github.com/users/alerithe/repos').then(response => {
             repoList.children[0].remove();
 
             if (response.ok) {
