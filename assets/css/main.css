@@ -1,6 +1,6 @@
 :root {
     --x-color: #000000;
-    --x-text-color: #444444;
+    --x-text-color: #000000;
     --x-back-color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
