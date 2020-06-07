@@ -1,10 +1,18 @@
 :root {
-    --x-color: #aaaaaa;
-    --x-text-color: #ffffff;
-    --x-back-color: #121212;
+    --x-color: #000000;
+    --x-text-color: #444444;
+    --x-back-color: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --x-color: #bbbbbb;
+        --x-text-color: #ffffff;
+        --x-back-color: #000000;
+    }
 }
 html, body {
-    font-family: 'Consolas', monospace, Arial, Helvetica, sans-serif;
+    font-family: Times, 'Times New Roman', serif;
+    font-size: 105%;
     background-color: var(--x-back-color);
     color: var(--x-color);
     width: 100%;
@@ -13,6 +21,7 @@ html, body {
     padding: 0px;
 }
 h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     color: var(--x-text-color);
 }
