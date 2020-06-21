@@ -1,7 +1,7 @@
 :root {
-    --x-text-color: #ffffff; /* Text Color */
-    --x-header-color: #ff66ff; /* Header Colors */
-    --x-back-color: #000000; /* Background Color */
+    --x-text-color: #ffffff; /* For standard text elements */
+    --x-eye-catcher: #ff66ff; /* For 'eye-catching' text elements */
+    --x-back-color: #000000;
 }
 html, body {
     font-family: 'Courier New', Courier, monospace;
@@ -15,10 +15,10 @@ html, body {
 }
 h1, h2, h3, h4, h5, h6 {
     font-style: italic;
-    color: var(--x-header-color);
+    color: var(--x-eye-catcher);
 }
 a, a:visited {
-    color: #ff66ff;
+    color: var(--x-eye-catcher);
 }
 a:hover {
     font-style: italic;
@@ -31,7 +31,7 @@ nav a {
     padding: 5px;
 }
 footer {
-    border-top: 1px solid var(--x-header-color);
+    border-top: 1px solid var(--x-eye-catcher);
     text-align: center;
 }
 #container {

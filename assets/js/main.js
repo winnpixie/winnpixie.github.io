@@ -10,7 +10,7 @@
         window.fetch('https://api.github.com/users/alerithe/repos').then(response => {
             repoList.children[0].remove();
 
-            if (response.ok) {
+            if (response.ok) { // Everything went smoothly, hooray!
                 // Convert the response to a JSON array.
                 response.json().then(repos => {
                     for (let repo of repos) {
