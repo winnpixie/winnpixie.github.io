@@ -1,15 +1,17 @@
+/*
+ * So you've decided to check out the code for my website, cool.
+ */
 (function () {
     'use strict';
 
     window.initialize = () => {
-        // Automagically grab my repositories and populate #repos with them.
+        // Retrieve my GitHub repositories and populate #repos with links and descriptions for them.
         let repoList = document.getElementById('repos');
-        window.fetch('https://api.github.com/users/alerithe/repos', {
-            cache: 'no-cache'
-        }).then(response => {
+        window.fetch('https://api.github.com/users/alerithe/repos').then(response => {
             repoList.children[0].remove();
 
             if (response.ok) {
+                // Convert the response to a JSON array.
                 response.json().then(repos => {
                     for (let repo of repos) {
                         let repoItem = document.createElement('li');
@@ -17,14 +19,20 @@
                         repoList.appendChild(repoItem);
                     }
                 });
-            } else {
-                let errorMessage = document.createElement('li');
-                errorMessage.innerText = "There was an issue grabbing the repository list...";
-                repoList.appendChild(errorMessage);
+            } else { // Something happened, but I'm not sure what.
+                let errorItem = document.createElement('li');
+                errorItem.innerText = 'An issue occured retrieving my repository list...';
+                repoList.appendChild(errorItem);
             }
+        }).catch(error => { // An exception was thrown, report it here.
+            repoList.children[0].remove();
+
+            let errorItem = document.createElement('li');
+            errorItem.innerText = `The following error occured while retrieving my repository list...\n\n${error}`;
+            repoList.appendChild(errorItem);
         });
 
-        // Automagically make external site links open in a new tab.
+        // Make external links open in a new tab.
         for (let link of document.getElementsByTagName('a')) {
             if (link.hostname !== location.hostname) {
                 link.target = '_blank';
