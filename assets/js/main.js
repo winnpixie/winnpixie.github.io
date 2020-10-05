@@ -7,9 +7,8 @@
     window.initialize = () => {
         // Retrieve my GitHub repositories and populate #repos with links and descriptions for them.
         let repoList = document.getElementById('repos');
+        
         window.fetch('https://api.github.com/users/alerithe/repos').then(res => {
-            repoList.children[0].remove();
-
             if (res.ok) { // Everything went smoothly, hooray!
                 // Convert the response to a JSON array.
                 res.json().then(repos => {
@@ -25,8 +24,6 @@
                 repoList.appendChild(errorItem);
             }
         }).catch(e => { // An exception was thrown, report it here.
-            repoList.children[0].remove();
-
             let errorItem = document.createElement('li');
             errorItem.innerText = `The following error occured while retrieving my repository list...\n\n${e}`;
             repoList.appendChild(errorItem);
