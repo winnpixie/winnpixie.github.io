@@ -7,15 +7,15 @@
     window.initialize = () => {
         // Retrieve my GitHub repositories and populate #repos with links and descriptions for them.
         let repoList = document.getElementById('repos');
-        window.fetch('https://api.github.com/users/alerithe/repos').then(response => {
+        window.fetch('https://api.github.com/users/alerithe/repos').then(res => {
             repoList.children[0].remove();
 
-            if (response.ok) { // Everything went smoothly, hooray!
+            if (res.ok) { // Everything went smoothly, hooray!
                 // Convert the response to a JSON array.
-                response.json().then(repos => {
+                res.json().then(repos => {
                     for (let repo of repos) {
                         let repoItem = document.createElement('li');
-                        repoItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}`;
+                        repoItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - <em>${repo.description}</em>`;
                         repoList.appendChild(repoItem);
                     }
                 });
@@ -24,11 +24,11 @@
                 errorItem.innerText = 'An issue occured retrieving my repository list...';
                 repoList.appendChild(errorItem);
             }
-        }).catch(error => { // An exception was thrown, report it here.
+        }).catch(e => { // An exception was thrown, report it here.
             repoList.children[0].remove();
 
             let errorItem = document.createElement('li');
-            errorItem.innerText = `The following error occured while retrieving my repository list...\n\n${error}`;
+            errorItem.innerText = `The following error occured while retrieving my repository list...\n\n${e}`;
             repoList.appendChild(errorItem);
         });
 
