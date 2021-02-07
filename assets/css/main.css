@@ -1,16 +1,22 @@
 :root {
     --x-text-color: #ffffff; /* For standard text elements */
-    --x-eye-catcher: #ff66ff; /* For 'eye-catching' text elements */
+    --x-eye-catcher: #0099ff; /* For 'eye-catching' text elements */
     --x-back-color: #000000;
 }
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--x-back-color);
     color: var(--x-text-color);
+
     width: 100%;
     max-width: 100%;
-    margin: 0px;
-    padding: 0px;
+	min-height: 90%;
+
+    display: flex;
+	align-items: center;
+	justify-content: center;
+
+    font-size: 90%;
 }
 h1, h2, h3, h4, h5, h6 {
     font-style: italic;
@@ -34,7 +40,9 @@ footer {
     text-align: center;
 }
 #container {
-    width: 50%;
+    border: 2px solid white;
+    padding: 10px;
+    width: 30%;
     margin: 0px auto;
 }
 @media (max-width: 1080px) {
