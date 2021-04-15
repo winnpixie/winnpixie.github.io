@@ -50,11 +50,6 @@ footer {
     width: 50%;
     margin: 0px auto;
 }
-@media (max-width: 1080px) {
-    #container {
-        width: 100%;
-    }
-}
 #repositories {
     display: grid;
     justify-content: space-evenly;
@@ -77,4 +72,12 @@ footer {
 .repo-title {
     border-bottom: 1px solid var(--x-eye-catcher);
     padding-bottom: 5px;
+}
+@media (max-width: 1080px) {
+    #container {
+        width: 100%;
+    }
+    #repositories {
+        grid-template-columns: auto;
+    }
 }
