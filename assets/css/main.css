@@ -21,7 +21,6 @@ html, body {
     animation: 0.2s ease-in-out animate-in;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-style: italic;
     color: var(--x-eye-catcher);
 }
 a, a:visited {
@@ -47,7 +46,7 @@ footer {
     text-align: center;
 }
 #container {
-    width: 50%;
+    width: 40%;
     margin: 0px auto;
 }
 #repositories {
