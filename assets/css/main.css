@@ -22,6 +22,7 @@ html, body {
     animation: 0.2s ease-in-out animate-in;
 }
 h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
     color: var(--x-eye-catcher);
 }
 a, a:visited {
@@ -34,10 +35,7 @@ nav {
     text-align: center;
 }
 button {
-    box-shadow: 0px 0px 2px 1px black;
-    font-weight: 105%;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: bold;
     color: #FFFFFF;
     background-color: var(--x-eye-catcher);
     border: none;
@@ -48,7 +46,6 @@ button {
 }
 button:hover, button:active {
     cursor: pointer;
-    box-shadow: 0px 0px 4px 2px black;
 }
 nav a {
     padding: 5px;
@@ -74,13 +71,9 @@ footer {
 .repository {
     border-radius: 3px;
     background-color: #222222;
-    box-shadow: 0px 0px 2px 1px black;
     padding: 5px;
     
     transition: all 0.1s ease-in-out;
-}
-.repository:hover, .repository:active {
-    box-shadow: 0px 0px 4px 2px black;
 }
 .repo-title {
     border-bottom: 1px solid var(--x-eye-catcher);

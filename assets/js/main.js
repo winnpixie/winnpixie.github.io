@@ -12,7 +12,6 @@
 
         // Retrieve my GitHub repositories and populate #repos with links and descriptions for them.
         let repoListElem = document.getElementById('repositories');
-
         window.fetch('https://api.github.com/users/alerithe/repos').then(response => {
             if (response.ok) { // Everything went smoothly, hooray!
                 // Convert the response to a JSON array.
