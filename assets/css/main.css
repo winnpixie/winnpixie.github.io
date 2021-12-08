@@ -4,15 +4,14 @@
     --x-back-color: #000000;
 }
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 html, body {
-    overflow-wrap: break-word;
     background-color: var(--x-back-color);
     color: var(--x-text-color);
 }
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: normal;
     font-style: italic;
     color: var(--x-eye-catcher);
 }
@@ -21,7 +20,7 @@ a, a:visited {
     color: var(--x-eye-catcher);
 }
 a:hover, a:active, a:focus {
-    font-style: italic;
+    text-decoration: underline;
 }
 button {
     color: #FFFFFF;
@@ -40,7 +39,6 @@ nav {
     padding: 5px;
 }
 nav a {
-    text-decoration: underline;
     padding: 5px;
 }
 footer {
@@ -49,6 +47,7 @@ footer {
 #container {
     max-width: 50%;
     margin: 0px auto;
+    word-break: break-word;
 }
 #repositories {
     display: grid;

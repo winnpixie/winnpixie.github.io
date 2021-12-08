@@ -18,7 +18,8 @@
                     for (let repo of repositories) {
                         let repoElem = document.createElement('div');
                         repoElem.classList.add('repository');
-                        repoElem.innerHTML = `<p class="repo-title"><a href="${repo.html_url}" target="_blank">${repo.name}</a></p>${repo.description}`;
+                        repoElem.innerHTML = '<p class="repo-title">'
+                            + `<a href="${repo.html_url}" target="_blank">${repo.name}</a></p>${repo.description}`;
                         repoListElem.appendChild(repoElem);
                     }
                 });
