@@ -1,63 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
-    <title>summer :: github.io</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>summer :: github.io</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="summer :: github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alerithe.github.io/" />
+    <meta property="og:description" content="Full-Stack freelancer that works from home." />
+    <meta property="og:site_name" content="Summer" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@alerithe" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body onload="doPostInitTasks();">
     <div id="container">
         <header>
-            <h1>Welcome. :)</h1>
-            <p>Hi, I'm <strong>Summer</strong>, I make things.</p>
+            <h1>Summer</h1>
+            <p>Full-Stack freelancer that works from home.</p>
             <nav>
-                <a href="https://github.com/alerithe">github</a>
-                <a href="https://youtube.com/Alerithe">youtube</a>
+                <p>
+                    <a href="https://github.com/alerithe">github</a>
+                    <a href="https://twitter.com/alerithe">twitter</a>
+                </p>
             </nav>
-            <br />
         </header>
         <main>
             <div class="info-container">
                 <h1>About</h1>
                 <div class="info-box">
-                    <p>Hi, my name is Summer. I am a software engineering student from New Jersey, USA.</p>
+                    <p>Hi, my name is Summer. I am a Computer Science student from New Jersey, USA. I create
+                        <a href="https://www.fsf.org/about/what-is-free-software" rel="nofollow">Free and Open Source
+                            Software</a> for
+                        anyone to use.
+                    </p>
                 </div>
             </div>
             <div class="info-container">
                 <h1>Projects</h1>
                 <div class="info-box">
-                    <p>My public projects, curated from my Github user profile.</p>
+                    <p>My public projects, curated from GitHub.com/alerithe.</p>
                     <div id="repositories"></div>
                 </div>
             </div>
         </main>
-        <br />
         <footer>
-            <p>If you like my work, please donate!</p>
-            <p>
-                Non-crypto:
+            <p>If you use and/or enjoy my work, please, consider donating!</p>
+            <p>Non-crypto:
             <ul>
-                <li><a href="https://ko-fi.com/winnpixie">Ko-fi.com</a></li>
+                <li><a href="https://ko-fi.com/winnpixie">Ko-fi.com/winnpixie</a></li>
             </ul>
             </p>
-            <p>
-                Crypto:
+            <p>Crypto:
             <ul>
-                <li>
-                    Monero (XMR) (recommended):
+                <li>Monero (XMR):
                     <br /><a
-                        href="monero:45zov2fJkM81PDfc8JE1KmdgQu54SCiqqcRnganAyQ98KyxaPUe3T7d2YQRXZw1SQMhyXHhp9W88q278h79Q766M9HhBmuQ">45zov2fJkM81PDfc8JE1KmdgQu54SCiqqcRnganAyQ98KyxaPUe3T7d2YQRXZw1SQMhyXHhp9W88q278h79Q766M9HhBmuQ
-                    </a>
+                        href="monero:45zov2fJkM81PDfc8JE1KmdgQu54SCiqqcRnganAyQ98KyxaPUe3T7d2YQRXZw1SQMhyXHhp9W88q278h79Q766M9HhBmuQ">
+                        45zov2fJkM81PDfc8JE1KmdgQu54SCiqqcRnganAyQ98KyxaPUe3T7d2YQRXZw1SQMhyXHhp9W88q278h79Q766M9HhBmuQ</a>
                 </li>
-                <li>
-                    Bitcoin (BTC):
-                    <br />(SegWit)
-                    <a href="bitcoin:bc1qqs4apzyltvf60kf58v5mgmqw2kun6s6nw9g7ca">bc1qqs4apzyltvf60kf58v5mgmqw2kun6s6nw9g7ca</a>
-                    <br />(Legacy)
-                    <a href="bitcoin:3M5jVLmw8BX8UsUVA9u2t2jYJpDLLyFcCU">3M5jVLmw8BX8UsUVA9u2t2jYJpDLLyFcCU</a>
+                <li>Bitcoin (BTC):
+                    <br />SegWit -
+                    <a href="bitcoin:bc1q73euq3c8f3d570n5yv729dlkpf570ueqaxetfd">
+                        bc1q73euq3c8f3d570n5yv729dlkpf570ueqaxetfd</a>
+                    <br />Legacy -
+                    <a href="bitcoin:1E8UtT9uXWc33apYuXRGGZKZYDQcsY9Dse">
+                        1E8UtT9uXWc33apYuXRGGZKZYDQcsY9Dse</a>
+                </li>
+                <li>Bitcoin Cash (BCH):
+                    <br /><a href="bitcoincash:qzgrxqg847ht8z22j8kkswnam9xdxetd8vsukgul8x">
+                        qzgrxqg847ht8z22j8kkswnam9xdxetd8vsukgul8x</a>
                 </li>
             </ul>
             </p>

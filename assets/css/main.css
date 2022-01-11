@@ -1,30 +1,31 @@
 :root {
-    --x-text-color: #FFFFFF;
-    --x-eye-catcher: #994499;
-    --x-back-color: #000000;
-}
-* {
+    --x-text-color: #AAAAAA;
+    --x-accent-color: #AA55AA;
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+::selection {
+    background-color: var(--x-accent-color);
+    color: #FFFFFF;
+}
 html, body {
-    background-color: var(--x-back-color);
+    background-color: #000000;
     color: var(--x-text-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-style: italic;
-    color: var(--x-eye-catcher);
+    color: var(--x-accent-color);
 }
 a, a:visited {
     text-decoration: none;
-    color: var(--x-eye-catcher);
+    color: var(--x-accent-color);
 }
 a:hover, a:active, a:focus {
     text-decoration: underline;
 }
 button {
     color: #FFFFFF;
-    background-color: var(--x-eye-catcher);
+    background-color: var(--x-accent-color);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -33,16 +34,16 @@ button:hover, button:active {
     cursor: pointer;
 }
 header {
-    border-bottom: 1px solid var(--x-eye-catcher);
+    border-bottom: 1px solid var(--x-accent-color);
+}
+footer {
+    border-top: 1px solid var(--x-accent-color);
 }
 nav {
     padding: 5px;
 }
 nav a {
     padding: 5px;
-}
-footer {
-    border-top: 1px solid var(--x-eye-catcher);
 }
 #container {
     max-width: 50%;
@@ -60,10 +61,10 @@ footer {
     text-align: right;
 }
 .info-container {
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 .info-box {
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 .repository {
     border-radius: 5px;
@@ -73,7 +74,7 @@ footer {
     transition: all 0.1s ease-in-out;
 }
 .repo-title {
-    border-bottom: 1px solid var(--x-eye-catcher);
+    border-bottom: 1px solid var(--x-accent-color);
     padding-bottom: 5px;
 }
 @media (max-width: 1080px) {
