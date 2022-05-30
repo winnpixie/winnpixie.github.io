@@ -9,8 +9,8 @@
         }
 
         let repoListElem = document.getElementById('repositories');
-        window.fetch('https://api.github.com/users/tivuhh/repos', {
-            headers: { "User-Agent": navigator.userAgent + " (tivuhh.github.io)" }
+        window.fetch('https://api.github.com/users/winnpixie/repos', {
+            headers: { "User-Agent": navigator.userAgent + " (winnpixie.github.io)" }
         }).then(response => {
             if (response.ok) {
                 response.json().then(repositories => {
