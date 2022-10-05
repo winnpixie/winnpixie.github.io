@@ -9,16 +9,19 @@
     color: #FFFFFF;
 }
 html, body {
-    background-color: #000000;
+    margin: 0px;
     color: var(--x-text-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: var(--x-accent-color);
 }
-a, a:visited {
+a {
     text-decoration: none;
     color: var(--x-accent-color);
+}
+a:visited {
+    color: #FFAAFF;
 }
 a:hover, a:active, a:focus {
     text-decoration: underline;
@@ -36,52 +39,38 @@ button:hover, button:active {
 header {
     border-bottom: 1px solid var(--x-accent-color);
 }
+main {
+    padding-bottom: 20px;
+}
 footer {
     border-top: 1px solid var(--x-accent-color);
 }
 nav {
-    padding: 5px;
+    padding-bottom: 15px;
 }
 nav a {
-    padding: 5px;
+    padding-right: 10px;
 }
-#container {
+
+#background {
+    background: linear-gradient(135deg, #111111, #000000);
+    z-index: -1337;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+#content {
     max-width: 50%;
     margin: 0px auto;
     word-break: break-word;
 }
-#repositories {
-    display: grid;
-    justify-content: space-evenly;
-    align-content: space-between;
-    grid-template-columns: 50% 50%;
-    gap: 15px;
-}
 #footer-right {
     text-align: right;
 }
-.info-container {
-    padding: 15px 0px;
-}
-.info-box {
-    padding: 0px 5px;
-}
-.repository {
-    border-radius: 5px;
-    background-color: #111111;
-    padding: 10px;
-    
-    transition: all 0.1s ease-in-out;
-}
-.repo-title {
-    border-bottom: 1px solid var(--x-accent-color);
-    padding-bottom: 5px;
-}
-@media (max-width: 1080px) {
+@media (max-width: 720px) {
     #container {
-        max-width: 100%;
-    }
-    #repositories {
-        grid-template-columns: auto;
+        max-width: 90%;
     }
 }
