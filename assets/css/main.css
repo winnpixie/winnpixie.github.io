@@ -21,7 +21,7 @@ a {
     color: var(--x-accent-color);
 }
 a:visited {
-    color: #FFAAFF;
+    color: #FF66FF;
 }
 a:hover, a:active, a:focus {
     text-decoration: underline;
@@ -70,7 +70,7 @@ nav a {
     text-align: right;
 }
 @media (max-width: 720px) {
-    #container {
+    #content {
         max-width: 90%;
     }
 }
