@@ -21,7 +21,7 @@ a {
     color: var(--x-accent-color);
 }
 a:visited {
-    color: #FF66FF;
+    color: #8866AA;
 }
 a:hover, a:active, a:focus {
     text-decoration: underline;
