@@ -1,5 +1,5 @@
 :root {
-    --x-text-color: #FFFFFF;
+    --x-text-color: #DDDDDD;
     --x-accent-color: #DDAABB;
 
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
@@ -8,6 +8,7 @@
     background-color: var(--x-accent-color);
     color: #FFFFFF;
 }
+
 html, body {
     margin: 0px;
     color: var(--x-text-color);
@@ -21,39 +22,39 @@ a {
     color: var(--x-accent-color);
 }
 a:visited {
-    color: #BBAADD;
+    color: #AA7788;
 }
 a:hover, a:active, a:focus {
     text-decoration: underline;
 }
-button {
-    color: #FFFFFF;
-    background-color: var(--x-accent-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-}
-button:hover, button:active {
-    cursor: pointer;
-}
 header {
+    display: flex;
     border-bottom: 1px solid var(--x-accent-color);
+}
+nav {
+    text-align: right;
+    padding: 15px;
+}
+nav a {
+    padding: 10px;
 }
 main {
     padding-bottom: 20px;
 }
 footer {
+    display: flex;
     border-top: 1px solid var(--x-accent-color);
 }
-nav {
-    padding-bottom: 15px;
+
+.header-area {
+    flex: 1;
 }
-nav a {
-    padding-right: 10px;
+.footer-area {
+    flex: 1;
 }
 
 #background {
-    background: linear-gradient(135deg, #111111, #000000);
+    background-color: #111111;
     z-index: -1337;
     position: fixed;
     left: 0px;
@@ -62,15 +63,23 @@ nav a {
     bottom: 0px;
 }
 #content {
-    max-width: 50%;
+    max-width: 60%;
     margin: 0px auto;
     word-break: break-word;
 }
+#header-right {
+    text-align: right;
+    align-self: flex-end;
+}
 #footer-right {
     text-align: right;
+    align-self: flex-end;
 }
 @media (max-width: 720px) {
     #content {
         max-width: 90%;
+    }
+    footer {
+        display: block;
     }
 }

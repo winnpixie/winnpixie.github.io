@@ -1,11 +1,19 @@
 (function () {
     'use strict';
 
-    window.doPostInitTasks = () => {
-        for (let link of document.getElementsByTagName('a')) {
-            if (link.hostname === location.hostname) continue;
+    window.doInitTasks = () => {
+        console.time('init_tasks');
 
-            link.target = '_blank';
+        patchExternalAnchors();
+
+        console.timeEnd('init_tasks');
+    };
+
+    const patchExternalAnchors = () => {
+        for (let anchorElem of document.getElementsByTagName('a')) {
+            if (anchorElem.hostname === location.hostname) continue;
+
+            anchorElem.setAttribute('target', '_blank');
         }
     };
 })();
