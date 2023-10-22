@@ -2,11 +2,7 @@
     'use strict';
 
     window.doInitTasks = () => {
-        console.time('init_tasks');
-
         patchExternalAnchors();
-
-        console.timeEnd('init_tasks');
     };
 
     const patchExternalAnchors = () => {

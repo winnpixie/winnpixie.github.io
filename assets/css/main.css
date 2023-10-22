@@ -1,84 +1,85 @@
+/* SPECIAL */
 :root {
     --x-text-color: #DDDDDD;
-    --x-accent-color: #DDAABB;
+    --x-accent-color: #BBAADD;
 
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
 }
+
 ::selection {
     background-color: var(--x-accent-color);
     color: #FFFFFF;
 }
 
+/* ELEMENTS */
 html, body {
     margin: 0px;
     color: var(--x-text-color);
+    background-color: #111111;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: var(--x-accent-color);
 }
+
 a {
     text-decoration: none;
     color: var(--x-accent-color);
 }
+
 a:visited {
-    color: #AA7788;
+    color: #776699;
 }
+
 a:hover, a:active, a:focus {
     text-decoration: underline;
 }
+
 header {
     display: flex;
     border-bottom: 1px solid var(--x-accent-color);
 }
+
 nav {
     text-align: right;
     padding: 15px;
 }
+
 nav a {
     padding: 10px;
 }
+
 main {
     padding-bottom: 20px;
 }
+
 footer {
-    display: flex;
     border-top: 1px solid var(--x-accent-color);
 }
 
+/* CLASSES */
 .header-area {
     flex: 1;
 }
-.footer-area {
-    flex: 1;
-}
 
-#background {
-    background-color: #111111;
-    z-index: -1337;
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-}
+/* INDIVIDUAL */
 #content {
     max-width: 60%;
     margin: 0px auto;
     word-break: break-word;
 }
+
 #header-right {
     text-align: right;
     align-self: flex-end;
 }
-#footer-right {
-    text-align: right;
-    align-self: flex-end;
-}
+
 @media (max-width: 720px) {
     #content {
         max-width: 90%;
     }
+
     footer {
         display: block;
     }
