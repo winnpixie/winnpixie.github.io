@@ -1,7 +1,7 @@
 /* SPECIAL */
 :root {
     --x-text-color: #DDDDDD;
-    --x-accent-color: #BBAADD;
+    --x-accent-color: #FFBBDD;
 
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
 }
@@ -29,7 +29,7 @@ a {
 }
 
 a:visited {
-    color: #776699;
+    color: #AA5577;
 }
 
 a:hover, a:active, a:focus {
