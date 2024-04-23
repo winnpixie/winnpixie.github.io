@@ -17,7 +17,7 @@ body {
     padding: 0px;
     color: var(--x-text-color);
     background-color: #111111;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.2em;
 }
 
@@ -96,5 +96,8 @@ footer {
 @media (max-width: 720px) {
     #content {
         max-width: 90%;
+    }
+    footer {
+        display: block;
     }
 }
