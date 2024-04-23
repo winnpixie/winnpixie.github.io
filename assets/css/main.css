@@ -1,9 +1,9 @@
 /* SPECIAL */
 :root {
     --x-text-color: #DDDDDD;
-    --x-accent-color: #FFBBDD;
+    --x-accent-color: #691337;
 
-    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
@@ -12,13 +12,21 @@
 }
 
 /* ELEMENTS */
-html, body {
+body {
     margin: 0px;
+    padding: 0px;
     color: var(--x-text-color);
     background-color: #111111;
+    font-size: 1.2em;
+    line-height: 1.2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
     color: var(--x-accent-color);
 }
@@ -29,10 +37,12 @@ a {
 }
 
 a:visited {
-    color: #AA5577;
+    color: #421337;
 }
 
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
     text-decoration: underline;
 }
 
@@ -55,6 +65,7 @@ main {
 }
 
 footer {
+    display: flex;
     border-top: 1px solid var(--x-accent-color);
 }
 
@@ -63,24 +74,27 @@ footer {
     flex: 1;
 }
 
+.footer-area {
+    flex: 1;
+}
+
 /* INDIVIDUAL */
 #content {
-    max-width: 60%;
+    max-width: 50%;
     margin: 0px auto;
     word-break: break-word;
 }
 
 #header-right {
-    text-align: right;
+    align-self: flex-end;
+}
+
+#footer-right {
     align-self: flex-end;
 }
 
 @media (max-width: 720px) {
     #content {
         max-width: 90%;
-    }
-
-    footer {
-        display: block;
     }
 }
