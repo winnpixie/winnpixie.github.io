@@ -1,7 +1,7 @@
 /* SPECIAL */
 :root {
     --x-text-color: #DDDDDD;
-    --x-accent-color: #691337;
+    --x-accent-color: #DDAADD;
 
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,27 +17,14 @@ body {
     padding: 0px;
     color: var(--x-text-color);
     background-color: #111111;
-    font-size: 1.1em;
-    line-height: 1.2em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-    color: var(--x-accent-color);
+    font-size: 1.2em;
+    word-spacing: 1pt;
+    line-height: 1.5em;
 }
 
 a {
     text-decoration: none;
     color: var(--x-accent-color);
-}
-
-a:visited {
-    color: #421337;
 }
 
 a:hover,
