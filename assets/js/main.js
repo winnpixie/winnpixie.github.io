@@ -6,10 +6,8 @@
     };
 
     const patchExternalAnchors = () => {
-        for (let anchorElem of document.getElementsByTagName('a')) {
-            if (anchorElem.hostname === location.hostname) continue;
-
-            anchorElem.setAttribute('target', '_blank');
+        for (let link of document.getElementsByTagName('a')) {
+            if (link.hostname !== location.hostname) link.setAttribute('target', '_blank');
         }
     };
 })();
