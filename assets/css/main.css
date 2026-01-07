@@ -1,12 +1,21 @@
 /* SPECIAL */
 :root {
-    --x-text-color: #EEEEEE;
-    --x-accent-color: #BAB1E5;
+    --x-background: #000000;
+    --x-text-color: #DDDDDD;
+    --x-accent-color: #BADD1E;
+
+    --x-sel-background: #DDDDDD;
+    --x-sel-text-color: #000000;
+
+    --x-content-width: 60%;
+
+    --x-font-size: 20px;
+    --x-line-width: 0.2rem;
 }
 
 ::selection {
-    background-color: var(--x-accent-color);
-    color: #691337;
+    background-color: var(--x-sel-background);
+    color: var(--x-sel-text-color);
 }
 
 /* ELEMENTS */
@@ -14,11 +23,11 @@ body {
     margin: 0px;
     padding: 0px;
     color: var(--x-text-color);
-    background-color: #000000;
+    background-color: var(--x-background);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    word-spacing: 1pt;
-    line-height: 1.47em;
+    font-size: var(--x-font-size);
+    word-spacing: 0.125rem;
+    line-height: 1.5rem;
 }
 
 a {
@@ -34,25 +43,24 @@ a:focus {
 
 header {
     display: flex;
-    border-bottom: 1px solid var(--x-accent-color);
+    border-bottom: var(--x-line-width) dotted var(--x-accent-color);
 }
 
 nav {
     text-align: right;
-    padding: 15px;
 }
 
 nav a {
-    padding: 10px;
+    padding: 0.47rem;
 }
 
 main {
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
 }
 
 footer {
     display: flex;
-    border-top: 1px solid var(--x-accent-color);
+    border-top: var(--x-line-width) dotted var(--x-accent-color);
 }
 
 /* CLASSES */
@@ -66,7 +74,7 @@ footer {
 
 /* INDIVIDUAL */
 #content {
-    max-width: 50%;
+    max-width: var(--x-content-width);
     margin: 0px auto;
     word-break: break-word;
 }
@@ -79,9 +87,17 @@ footer {
     align-self: flex-end;
 }
 
-@media (max-width: 720px) {
-    #content {
-        max-width: 90%;
+@media screen and (max-width: 720px) {
+    :root {
+        --x-content-width: 95%;
+    }
+
+    body {
+        line-height: 1.75rem;
+    }
+
+    header {
+        display: block;
     }
 
     footer {
