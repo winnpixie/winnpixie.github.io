@@ -1,5 +1,6 @@
 /* SPECIAL */
 :root {
+    color-scheme: dark;
     --x-background: #000000;
     --x-text-color: #DDDDDD;
     --x-accent-color: #BADD1E;
@@ -11,6 +12,7 @@
 
     --x-font-size: 20px;
     --x-line-width: 0.2rem;
+    --x-line-type: dotted;
 }
 
 ::selection {
@@ -31,23 +33,22 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--x-accent-color);
 }
 
 a:hover,
 a:active,
 a:focus {
-    text-decoration: underline;
+    font-style: italic;
 }
 
 header {
-    display: flex;
-    border-bottom: var(--x-line-width) dotted var(--x-accent-color);
+    border-bottom: var(--x-line-width) var(--x-line-type) var(--x-accent-color);
 }
 
 nav {
-    text-align: right;
+    text-align: center;
 }
 
 nav a {
@@ -59,17 +60,8 @@ main {
 }
 
 footer {
-    display: flex;
-    border-top: var(--x-line-width) dotted var(--x-accent-color);
-}
-
-/* CLASSES */
-.header-area {
-    flex: 1;
-}
-
-.footer-area {
-    flex: 1;
+    text-align: center;
+    border-top: var(--x-line-width) var(--x-line-type) var(--x-accent-color);
 }
 
 /* INDIVIDUAL */
@@ -79,28 +71,12 @@ footer {
     word-break: break-word;
 }
 
-#header-right {
-    align-self: flex-end;
-}
-
-#footer-right {
-    align-self: flex-end;
-}
-
-@media screen and (max-width: 720px) {
+@media (width <= 640px) {
     :root {
         --x-content-width: 95%;
     }
 
     body {
         line-height: 1.75rem;
-    }
-
-    header {
-        display: block;
-    }
-
-    footer {
-        display: block;
     }
 }
